@@ -1,10 +1,10 @@
 export default {
 
     database: {
-        host: 'localhost',
-        user: 'root',
-        password: 'root',
-        database: 'findxing'
+        host: 'sql.freedb.tech',
+        user: 'freedb_marta',
+        password: 'xPQbEJxM$Ax7Pcb',
+        database: 'freedb_findxing'
     }
 
 }
