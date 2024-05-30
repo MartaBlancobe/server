@@ -1,14 +1,21 @@
-import mysql from 'promise-mysql';
+const mysql = require('mysql2/promise');
 
 import keys from './keys';
 
 const pool = mysql.createPool(keys.database);
-pool.then(function(p){
-        return  p.getConnection()
-      }).then(function(){
-        console.log('DB is Connected!!');
-      })
+
+
+async function testConnection() {
+  try {
+    const connection = await pool.getConnection();
+    console.log('Conexión exitosa');
+    connection.release();
+  } catch (err) {
+    console.error('Error en la conexión:', err);
+  }
+}
+
+testConnection();
 
 export default pool;
-
 
