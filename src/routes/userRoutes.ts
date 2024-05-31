@@ -11,9 +11,9 @@ class UserRoutes {
     }
 
     config() {
-        this.router.put('/formContact', userController.createFormContact);
+        this.router.post('/formContact', userController.createFormContact);
         this.router.post('/login', userController.login);
-        this.router.put('/registerUser', userController.registerUser);
+        this.router.post('/registerUser', userController.registerUser);
     }
 
 }

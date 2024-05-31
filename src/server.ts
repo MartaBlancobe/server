@@ -1,8 +1,8 @@
 import express, { Application } from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
-import indexRoutes from './src/routes/indexRoutes';
-import userRoutes from './src/routes/userRoutes';
+import indexRoutes from './routes/indexRoutes';
+import userRoutes from './routes/userRoutes';
 
 
 class Server {
